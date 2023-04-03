@@ -1,0 +1,182 @@
+import React from "react";
+import ReactDOM from "react-dom";
+import {
+  AdaptivityProvider,
+  ConfigProvider,
+  AppRoot,
+  SplitLayout,
+  SplitCol,
+  View,
+  Panel,
+  PanelHeader,
+  Header,
+  Group,
+  SimpleCell,
+} 
+from "@vkontakte/vkui";
+import "@vkontakte/vkui/dist/vkui.css";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(http://habrastorage.org/files/996/d76/d04/996d76d0410d422fa54cc433ce7ead2a.png);
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+  width: 500px;
+  margin: 50px auto;
+}
+
+.section_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 300px;
+  height: 250px;
+  font-size: 50px;
+}
+
+.item1 {
+  background-color: #FF7373;
+}
+
+.item2 {
+  background-color: #FF9640;
+}
+
+.item3 {
+  background-color: #5CCCCC;
+}
+
+.item4 {
+  background-color: #67E667;
+}
+
+.item5 {
+  background-color: #1D7373;
+}
+
+const App = () => {
+  return (
+    <AppRoot>
+      <SplitLayout header={<PanelHeader separator={false} />}>
+        <SplitCol autoSpaced>
+          <View activePanel="main">
+            <Panel id="main">
+              <PanelHeader>VKUI</PanelHeader>
+              <Group header={<Header mode="secondary">Items</Header>}>
+                <SimpleCell>Hello</SimpleCell>
+                <SimpleCell>World</SimpleCell>
+              </Group>
+            </Panel>
+          </View>
+        </SplitCol>
+      </SplitLayout>
+    </AppRoot>
+  );
+  {
+  "type":"VKWebAppInitResult",
+  "data":{
+    "result": true
+  }
+}
+};
+
+ReactDOM.render(
+  <ConfigProvider>
+    <AdaptivityProvider>
+      <App />
+    </AdaptivityProvider>
+  </ConfigProvider>,
+  document.getElementById("root")
+);
+{
+  "type":"VKWebAppInitResult",
+  "data":{
+    "result": true
+  }
+  .slider {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto 0;
+  /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+  user-select: none;
+  /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+  touch-action: pan-y;
+}
+
+/* Если где-то внутри слайдера будут изображения,
+то нужно задать им pointer-events: none,
+чтобы они не перетаскивались мышью */
+
+.slider img {
+  poiner-events: none;
+}
+
+.slider-list {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slider-list.grab {
+  cursor: grab;
+}
+
+.slider-list.grabbing{
+  cursor: grabbing;
+}
+
+.slider-track {
+  display: flex;
+}
+
+.slide {
+  width: 200px;
+  height: 200px;
+  /* Чтобы слайды не сжимались */
+  flex-shrink: 0;
+  /* Увеличиваем и центрируем цифру внутри слайда */
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+}
+
+}
+#group-2507 {
+  background-color: var(--green-primary6);
+  border-radius: 20px 20px 0px 0px;
+  padding: 14px 17px 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#line-47 {
+  width: 28.17%;
+  height: 4.82%;
+  background-color: var(--green-prima);
+  margin-bottom: 14px;
+  margin-left: 142px;
+}
+#meroprijatija-3 {
+  margin-bottom: 18px;
+  align-self: stretch;
+}
+#num-13-meroprijatij {
+  width: 37.06%;
+  height: 22.89%;
+  color: var(--green-primary);
+  font-family: var(--gilroy-19-semi-bold-family);
+  font-size: var(--gilroy-19-semi-bold-size);
+  font-weight: var(--gilroy-19-semi-bold-weight);
+  line-height: var(--gilroy-19-semi-bold-line-height);
+}
