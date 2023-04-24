@@ -21,9 +21,9 @@
 
 <body>
     <div id="app"></div>
+    <script src="https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js"></script>
     <script>
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js"
-          const firebaseConfig = {
+          var firebaseConfig = {
     apiKey: "AIzaSyDCRWpRzK2cTAWWs5D88E76TQWE49ji-QE",
     authDomain: "vk11011-f9b04.firebaseapp.com",
     projectId: "vk11011-f9b04",
@@ -33,7 +33,7 @@
   };
 
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+  firebase.initializeApp(firebaseConfig);
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
