@@ -64,9 +64,9 @@ function drawMask() {
     const positions = faceTracker.getCurrentPosition();
     if (positions !== false) {
         push();
-        const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.2;
+        const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.3;
         const wy = Math.abs(positions[37][1] - Math.min(positions[16][1], positions[20][1])) * 1.2;
-        translate(-wx/2, -wy/2);
+        translate(-wx/2, -wy/2-100);
         image(imgMask, positions[33][0], positions[33][1], wx, wy);
         pop();
     }
@@ -76,10 +76,10 @@ function drawFace() {
     const positions = faceTracker.getCurrentPosition();
     if (positions !== false) {
         push();
-        const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.2;
+        const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.0;
         const wy = Math.abs(positions[7][1] - Math.min(positions[16][1], positions[20][1])) * 1.2;
-        translate(-wx/2, -wy/2);
-        image(imgFace, positions[62][0], positions[62][1], wx, wy);
+        translate(-wx/2, -wy/2-20);
+        image(imgFace, positions[60][0], positions[60][1], wx, wy);
         pop();
     }
 }
@@ -88,9 +88,9 @@ function drawVolos() {
     const positions = faceTracker.getCurrentPosition();
     if (positions !== false) {
         push();
-        const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.2;
+        const wx = Math.abs(positions[13][0] - positions[1][0]) * 1.4;
         const wy = Math.abs(positions[7][1] - Math.min(positions[16][1], positions[20][1])) * 1.2;
-        translate(-wx/2, -wy/2);
+        translate(-wx/2, -wy/2-180);
         image(imgVolos, positions[62][0], positions[62][1], wx, wy);
         pop();
     }
@@ -100,9 +100,9 @@ function drawBor() {
     const positions = faceTracker.getCurrentPosition();
     if (positions !== false) {
         push();
-        const wx = Math.abs(positions[44][0] - positions[50][0]) * 1.2;
+        const wx = Math.abs(positions[44][0] - positions[50][0]) * 2;
         const wy = Math.abs(positions[7][1] - Math.min(positions[44][1], positions[50][1])) * 1.5;
-        translate(-wx/2, -wy/2);
+        translate(-wx/2, -wy/2+25);
         image(imgBor, positions[60][0], positions[60][1], wx, wy);
         pop();
     }
